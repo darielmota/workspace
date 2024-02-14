@@ -73,6 +73,20 @@ var contador = 0;
     
 //     while(contador < 1000)
 
-for (let i = 0; i < 10; i++){
-    console.log(i)
+// for (let i = 0; i < 10; i++){
+//     console.log(i)
+// }
+
+//typeof null underfile
+
+var nombre = "hola";
+
+// console.log(typeof nombre)
+
+var num = null;
+
+if (typeof hola == "undefined") {
+    console.log("hola que hace")
 }
+
+console.log(undefined)
