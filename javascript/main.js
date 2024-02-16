@@ -82,27 +82,75 @@ var numero_secreto = Math.random() * (max-min) + min;
 numero_secreto = parseInt(numero_secreto);
 //0.....1 esto es de la propiedad math es a los numero o cantidad que llega
 
-console.log(numero_secreto);
+// console.log(numero_secreto);
 
 var mensaje = "ingresa un numero para adivinar el numero magico";
 
-while(true){
-    var numero_del_usuario = prompt(mensaje, "0");
+// while(true){
+//     var numero_del_usuario = prompt(mensaje, "0");
 
-    numero_del_usuario = parseInt(numero_del_usuario);
+//     numero_del_usuario = parseInt(numero_del_usuario);
     
-    if(numero_del_usuario === numero_secreto){
-        alert("ganaste");
-        break;
-    }
-    else if(numero_del_usuario === 0){
-        break;
-    }
-    else if(numero_del_usuario > numero_secreto){
-        mensaje = "lo sentimos el numero es mayor a  el numero magico";
-    }
-    else if(numero_del_usuario < numero_secreto){
-        mensaje = "lo sentimos , el nmero es menor al numero magico";
-    }
+//     if(numero_del_usuario === numero_secreto){
+//         alert("ganaste");
+//         break;
+//     }
+//     else if(numero_del_usuario === 0){
+//         break;
+//     }
+//     else if(numero_del_usuario > numero_secreto){
+//         mensaje = "lo sentimos el numero es mayor a  el numero magico";
+//     }
+//     else if(numero_del_usuario < numero_secreto){
+//         mensaje = "lo sentimos , el nmero es menor al numero magico";
+//     }
+    
+// }
+
+//selecionar elementos
+
+// var div = document.getElementById("constent-div");
+
+// div.classList.add("style"); 
+
+//eventos en javascript
+
+// document.getElementById('btn').onclick = function(){
+//     alert('Hey Alerta Wey!');
+// }
+
+
+// var button = document.getElementById("btn");
+//     button.onclick = function(){
+//         alert("hola mundo")
+//     }
+ 
+
+// arreglos
+
+var arreglo = [20, 2, 5];
+var i = arreglo.length;
+for(;i>= 0; i--){
+    // console.log(arreglo[i]);
+}
+
+
+function suma (a, b){
+    return a * b;
     
 }
+    // console.log(suma(5,100))
+
+    // condiciones para arreglos
+
+    function ordenacion(a, b){
+        return a -b;
+    }
+
+    var arreglo= [2,3,4,5,66,7]
+
+    arreglo.sort(ordenacion);
+    
+    arreglo.reverse();
+
+    console.log(arreglo)
