@@ -128,29 +128,94 @@ var mensaje = "ingresa un numero para adivinar el numero magico";
 
 // arreglos
 
-var arreglo = [20, 2, 5];
-var i = arreglo.length;
-for(;i>= 0; i--){
-    // console.log(arreglo[i]);
-}
+// var arreglo = [20, 2, 5];
+// var i = arreglo.length;
+// for(;i>= 0; i--){
+//     // console.log(arreglo[i]);
+// }
 
 
-function suma (a, b){
-    return a * b;
+// function suma (a, b){
+//     return a * b;
     
-}
+//}
     // console.log(suma(5,100))
 
     // condiciones para arreglos
 
-    function ordenacion(a, b){
-        return a -b;
-    }
+    // function ordenacion(a, b){
+    //     return a -b;
+    // }
 
-    var arreglo= [2,3,4,5,66,7]
+    // var arreglo = [2,3,4,5,66,7]
 
-    arreglo.sort(ordenacion);
+    // arreglo.sort(ordenacion);
     
-    arreglo.reverse();
+    // arreglo.reverse();
 
-    console.log(arreglo)
+    // console.log(arreglo)
+
+
+    // filter
+
+    // var numeros = [10,24,33,44,80,16]
+    // var nuemros_pares = numeros.filter(function(numeros){
+    //     return numero % 2 ===0
+    // })
+
+    // console.log(nuemros_pares)
+
+    //map funcion
+
+    // var numero = [1,22,45,66,777]
+
+    // var cuadado = numero.map(function(elemento){
+    //     return elemento* elemento;
+    // })
+
+    // console.log(cuadado)
+
+    //forEach
+
+    // var numeros = [2,4,6,8];
+
+    // numeros.forEach(function(element, index , arreglo){
+    //     arreglo[index] = Math.pow(element,2)
+    // })
+
+    // console.log(numeros)
+
+    // var letra = ["H","O","L","A"]
+
+    // var numeross = [20,1,23,1,5]
+    // var suma = numeross.reduce(function(valor_anterior_retornado, valor_actual, index, arreglo){
+    //     return valor_anterior_retornado+ valor_actual;
+    // });
+    // console.log(suma)
+
+    // var suma = 0;
+    // for(var i =0; i<numeros.length;i++){
+    //     suma += numeross[i]
+    // }
+
+    // console.log(suma)
+
+// intro a nueva etapa
+(function(){
+    document.getElementById("btn").onclick = function(){
+    console.log("hola ")
+      
+}
+
+setTimeout(function(){
+    console.log(hola_mundo(" dariel la maxima"));
+},2000);
+
+})();
+
+function hola_mundo(nombre){
+    function construct(){
+        return "hola"+nombre;
+    }
+    return construct()
+}
