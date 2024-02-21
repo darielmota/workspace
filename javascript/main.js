@@ -201,21 +201,102 @@ var mensaje = "ingresa un numero para adivinar el numero magico";
     // console.log(suma)
 
 // intro a nueva etapa
-(function(){
-    document.getElementById("btn").onclick = function(){
-    console.log("hola ")
+// (function(){
+//     document.getElementById("btn").onclick = function(){
+//     console.log("hola ")
       
-}
+// }
 
-setTimeout(function(){
-    console.log(hola_mundo(" dariel la maxima"));
-},2000);
+// setTimeout(function(){
+//     console.log(hola_mundo(" dariel la maxima"));
+// },2000);
 
-})();
+// })();
 
-function hola_mundo(nombre){
-    function construct(){
-        return "hola"+nombre;
+// function hola_mundo(nombre){
+//     function construct(){
+//         return "hola"+nombre;
+//     }
+//     return construct()
+// }
+
+//json => javascript object notation
+// diccionario / hashe
+// this tambien
+
+// var arreglo= [1,2,3,4,5,]
+
+// var curso = {
+//     titulo: "curso de javascript",
+//     videos: 19,
+//     tutor: "Uriel",
+//     introducion: function(){
+//         console.log("bienvenido a:" + this.titulo, "hay mas de " +  this.videos, "videos", "u nuestro profesor es ", this.tutor )
+//     }
+// }
+
+
+// console.log(curso.introducion());
+
+//declaracion de objetos  con funciones
+
+// function tutor (nombre, apellido) {
+//     this.nombre = nombre;
+//     this.saludar = function(){
+//         console.log("hola a todos soy"+this.nombre)
+//     }
+//     if(typeof apellido !== "undefined"){
+//         this.nombre_comleto = nombre+""+ apellido
+//     }
+// }
+
+// var dariel = new tutor("dariel","mota");
+
+// dariel.saludar();
+
+// console.log(dariel.nombre_comleto);
+
+// var jose = new tutor("jose");
+
+// jose.saludar();
+
+//prototupe
+
+
+// function tutor (nombre, apellido) {
+//     this.nombre = nombre;
+//     this.saludar = function(){
+//         console.log("hola a todos soy"+this.nombre)
+//     }
+//     if(typeof apellido !== "undefined"){
+//         this.nombre_comleto = nombre+""+ apellido
+//     }
+// }
+
+// var dariel = new tutor("dariel","mota");
+// tutor.prototype.edad = 17
+// tutor.proyecto.iniciar_tutorial = function (){
+//     console.log("nienvenidos a este nuevo turtorial")
+// }
+
+// uriel.iniciar_tutorial();
+
+
+//getters y setters
+
+var curso = {
+    titulo: "hola mundo",
+    tutor_value: "uriel",get tutor(){
+return this.tutor_value.toUpperCase()
+    } ,
+    set tutor(tutor){
+        if (tutor === "" || (typeof tutor === "undefined")){
+            return;
+        }
+        this.tutor_value = tutor;
     }
-    return construct()
 }
+
+
+curso.tutor="";
+console.log(curso.tutor);
