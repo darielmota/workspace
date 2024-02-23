@@ -301,87 +301,227 @@ var mensaje = "ingresa un numero para adivinar el numero magico";
 // curso.tutor="";
 // console.log(curso.tutor);
 
-(function(){
-    self.Board = function(width,height){
-        this.width = width;
-        this.height = height;
-        this.playing = false;
-        this.game_over = false;
-        this.bars = [];
-        this.ball = null
-    }
+// (function(){
+//     self.Board = function(width,height){
+//         this.width = width;
+//         this.height = height;
+//         this.playing = false;
+//         this.game_over = false;
+//         this.bars = [];
+//         this.ball = null
+//     }
 
-    self.Board.prototype = {
-        get elements(){
-            var elements = this.bars;
-            elements.push(ball);
-            return elements
-        }
-    }
-})();
+//     self.Board.prototype = {
+//         get elements(){
+//             var elements = this.bars;
+//             // elements.push(ball);
+//             return elements
+//         }
+//     }
+// })();
 
-(function(){
-    self.BoardView = function(canvas, board){
-        this.canvas = canvas;
-        this.canvas.width= board.width;
-        this.canvas.height = board.height;
-        this.board = board;
-        this.ctx = canvas.getContext("2d")
-    }
+// (function(){
+//     self.BoardView = function(canvas, board){
+//         this.canvas = canvas;
+//         this.canvas.width= board.width;
+//         this.canvas.height = board.height;
+//         this.board = board;
+//         this.ctx = canvas.getContext("2d")
+//     }
 
-    self.BoardView.prototype = {
-        draw: function(){
-            for (var i = this.board.element.length -1; i>= 0; i--){
-                var el = this.board.elements[i];
+//     self.BoardView.prototype = {
+//         clean: function{
+//             this.ctx.clearRect(0,0,board.width,board.height)
+//         },
+//         draw: function(){
+//             for (var i = this.board.element.length -1; i>= 0; i--){
+//                 var el = this.board.elements[i];
 
-                draw(this.ctx,el)
-            }
-        }
-    }
+//                 draw(this.ctx,el)
+//             }
+//         }
+//     }
 
-    function draw(ctx, element){
-        if(element !== null && element.hasOwnProperty("kind")){
-            switch(element.kind){
-                case "rectangle":
-                    ctx.fillRect(element.x,element.y,element. width,element.height)
-                    break;
-            }
-        }
+//     function draw(ctx, element){
+       
+//             switch(element.kind){
+//                 case "rectangle":
+//                     ctx.fillRect(0,0,this.element.x,element.y,element. width,element.height)
+//                     break;
+//             }
         
-    }
+        
+//     }
 
-})();
+// })();
 
-(function(){
-    self.Bar = function(x,y,width,height,board){
-        this.x = x;
-        this.y = y;
-        this.width = width;
-        this.height = height;
-        this.board = board;
-        this.board.bars.push(this);
-        this.kind = "rectangle";
-    }
+// (function(){
+//     self.ball = function(x,y,radius, board){
+//         this.x = x;
+//         this.y = y;
+//         this.radius = radius;
+//         this.speed_y = 0;
+//         this.speed_x = 3;
+//         this.board = board;
+        
+//         board.ball = this;
+//         this.kind = "circle";
+//     }
+// })
 
-    self.Board.prototype = {
-        down: function(){
+// (function(){
+//     self.Bar = function(x,y,width,height,board){
+//         this.x = x;
+//         this.y = y;
+//         this.width = width;
+//         this.height = height;
+//         this.board = board;
+//         this.board.bars.push(this);
+//         this.kind = "rectangle";
+//         this.speed = 10;
+//     }
 
-        },
-        up: function(){
+//     self.Board.prototype = {
+//         down: function(){
+//             this. y += this.speed;
+//         },
+//         up: function(){
+//             this.y -= this.speed;
+//         },
+//         toString: function(){
+//             return "x:"+ this.x +"y:"+this.y;        }
+//     }
+// })
 
-        }
-    }
+// var board = new Board(800,400);
+// var bar = new Bar(20,100,40,100,board);
+// var bar_2 = new Bar(735,100,40,100,board);
+// var canvas = document.getElementById("canvas");
+// var board_view = new board_view(canvas, board);
+// var ball = new Ball(350, 100,10,board)
+
+// window.requestAnimationFrame(controller)
+
+// document.addEventListener("keydown", function(ev){
+//     ev.preventDefault();
+//     if(ev.keyCode == 38){
+//         bar.up();
+//     }
+//     else if(ev.keyCode == 40){
+//         bar.down();
+//     }else if(ev.keyCode === 87){
+//     bar_2.up();}
+//     else if (ev.keyCode=== 83){
+//         	bar_2.down();
+//     }
+// })
+
+// self.addEventListener("load",main);
+
+// function main(){
+//     console.log("hola mundo");
+//     console.log(board);
+//     board_view.draw();
+// }
+
+// // main()
+
+// template String
+
+
+// function tagged(cadenas,valores){
+//     console.log(cadenas);
+//     console.log(valores);
+// }
+
+// var nombre = "dariel";
+
+// tagged`hola ${"codigo"+ "facil lo odio"} mal dia, ${nombre}`
+
+//arrow funtion
+
+// function tutor(){
+//     this.nombre = "dariel"
+
+// setTimeout(() => {
+//     this.nombre = "codigo facilito";
+// },500);
+// }
+
+// var tutor = new tutor();
+
+// console.log(tu.nombre);
+
+//clases (ES6)
+
+// class tutor{
+//     constructor(nombre,last_name){
+//         this.nombre = nombre;
+//         this.last_name = last_name;
+//     }
+// full_name(){
+//     return this.nombre + "" + this.last_name;
+//     }   
+// }
+
+// var tutor = new tutor("uriel","me vale");
+
+// console.log(tutor.full_name());
+
+
+// variable let 
+
+// init();
+// function init(){
+//     var nombre = "dariel"
+//     if(true){
+//         let nombre = "codigo facil no es"
+//         console.log(nombre)
+ 
+//     }
+//     console.log(nombre)
+// }
+
+
+
+//dom crear agregar nodos
+bind_close();
+$("#btn").addEventListener("click",function (){
+    var input = document.createElement("input");
+    input.setAttribute("type", "email");
+    input.setAttribute("placeholder", "correo")
+    input.setAttribute("name","mails[]")
+
+ $("#form").appendChild(input)
 })
 
-self.addEventListener("load",main);
+my_alert("se agrego un nuevo campo")
 
-function main(){
-    console.log("hola mundo");
-    var board = new Board(800,400);
-    var bar = new Bar(20,100,40,100,board)
-    var bar = new Bar(735,100,40,100,board)
-    var canvas = document.getElementById("canvas");
-    var board_view = new BoardView(canvas, board)
+function bind_close(){
+    var elements = document.querySelectorAll(".close")
+    for (var i = elements.length - 1; i >= 0; i--){
+        var el =elements[i]
+        el.addEventListener("click", function(){
+            this.parentNode.style.display = "none"
+        })
+    }
+    
 }
 
-main()
+function my_alert(msg){
+    console.log($("body").chidren[1]);
+    var div = document.createElement("div");
+    div.setAttribute("class", "alert");
+    div.innerHTML = msg;
+    var close = document.createElement("spam");
+    close.style.float = "right"
+    close.innerHTML = "x";
+    close.setAttribute("class", "close")
+
+    div.appendChild(close)
+    $("body").insertBefore(div, $("body"). firstChild);
+}
+
+function $(selector){
+    return document.querySelector(selector)
+}
